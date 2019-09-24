@@ -37,7 +37,7 @@ public class Player {
 			if (movimientosPosibles.size() > 1) {
 				//Si hay mas de uno posible, pido que se ingrese por pantalla
 				for (int i = 0 ; i < movimientosPosibles.size() ; i++ )
-					System.out.println("Escriba el movimiento: " + movimientosPosibles.get(i));
+					System.out.println("Movimiento Posible: " + movimientosPosibles.get(i));
 				InputStreamReader in = new InputStreamReader(System.in);
 	            BufferedReader br = new BufferedReader(in);
 	            String movimientoInput = br.readLine();
@@ -54,7 +54,7 @@ public class Player {
 			}
 			imprimirUbicacion();
 			System.out.println("Movimientos Hecho: " + movimientoHechos);
-			System.out.println("Movimientos Restantes: " + movimientosRestantes);
+			System.out.println("Movimientos Restantes: " + (movimientosRestantes - movimientoHechos));
 				
 		}
 	}
