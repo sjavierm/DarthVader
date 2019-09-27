@@ -13,6 +13,11 @@ public class GameController {
 
 	
 	public int startGame(int cantPlayers) {
+		/*
+		Lo que hice fue agregarle la parte para que vea si ingreso 0 o mas de 4 jugadores
+		Despues habria que buscar la manera para ver si mostramos un mensaje de error o algo
+		por estilo en esos dos casos
+		*/
 		this.contTurnos = 0;
 		this.turnoPlayer = 0;
 		this.cantPlayers = cantPlayers;
@@ -25,8 +30,7 @@ public class GameController {
 			Player player = new Player(i);
 			listPlayer.add(player);
 		}
-		//Que pasa si ingresa un cero en cantPlayers
-		///Deberia ser un int lo que retorne la funcion
+		
 		
 		gameboard.generarCaminos();
 		return 1;
