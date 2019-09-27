@@ -1,0 +1,35 @@
+public class TestMarioParty {
+
+	@Test
+	public void testGameController() {
+		
+		
+		GameController gc1 = new GameController();
+		int resp=gc1.startGame(0);
+		assertEquals(0,resp);
+	
+		GameController gc2 = new GameController();
+		int resp2=gc2.startGame(2);
+		assertEquals(1, resp2);
+		
+		GameController gc21 = new GameController();
+		int resp21=gc21.startGame(2);
+		assertEquals(1, resp21);
+		
+		GameController gc22 = new GameController();
+		int resp22=gc22.startGame(4);
+		assertEquals(1, resp22);
+		
+		
+		GameController gc23 = new GameController();
+		int resp23=gc23.startGame(5);
+		assertEquals(-1, resp23);
+		
+		GameController gc3 = new GameController();
+		int resp3=gc3.startGame(-1);
+		assertEquals(0, resp3);
+		
+	}
+	
+
+}
