@@ -1,35 +1,36 @@
+package marioParty;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
 public class TestMarioParty {
 
 	@Test
-	public void testGameController() {
+public void testGameController() {
 		
+
+		GameController gc = new GameController();
+		int resp=gc.validarParametros(-1,19);
+		int resp1=gc.validarParametros(2, 0);
+		int resp2=gc.validarParametros(2, 25);
+		int resp3=gc.validarParametros(3, 25);
+		int resp4=gc.validarParametros(4, 100);
+		int resp5=gc.validarParametros(1, 200);
+		int resp6=gc.validarParametros(2, -1);
+		int resp7=gc.validarParametros(2, 25);
 		
-		GameController gc1 = new GameController();
-		int resp=gc1.startGame(0);
-		assertEquals(0,resp);
-	
-		GameController gc2 = new GameController();
-		int resp2=gc2.startGame(2);
+		assertEquals(-1, resp);
+		assertEquals(-1, resp1);
 		assertEquals(1, resp2);
-		
-		GameController gc21 = new GameController();
-		int resp21=gc21.startGame(2);
-		assertEquals(1, resp21);
-		
-		GameController gc22 = new GameController();
-		int resp22=gc22.startGame(4);
-		assertEquals(1, resp22);
+		assertEquals(1, resp3);
+		assertEquals(1, resp4);
+		assertEquals(-1, resp5);
+		assertEquals(-1, resp6);
+		assertEquals(1, resp7);
 		
 		
-		GameController gc23 = new GameController();
-		int resp23=gc23.startGame(5);
-		assertEquals(-1, resp23);
-		
-		GameController gc3 = new GameController();
-		int resp3=gc3.startGame(-1);
-		assertEquals(0, resp3);
 		
 	}
-	
 
 }
