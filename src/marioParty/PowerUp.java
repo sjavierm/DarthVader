@@ -1,44 +1,39 @@
 package marioParty;
 
 public class PowerUp {
-	private String tipo;
-	private int vidas;
-	private int puntos;
-	private int turnosExtra;
+	private String nombre;
+	private boolean turnoExtra;
+	private int puntosExtra;
 	
-	public String getTipo() {
-		return tipo;
-	}
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
-	public int getVidas() {
-		return vidas;
-	}
-	public void setVidas(int vidas) {
-		this.vidas = vidas;
-	}
-	public int getPuntos() {
-		return puntos;
-	}
-	public void setPuntos(int puntos) {
-		this.puntos = puntos;
-	}
-	public int getTurnosExtra() {
-		return turnosExtra;
-	}
-	public void setTurnosExtra(int turnosExtra) {
-		this.turnosExtra = turnosExtra;
-	}
-	
-	public PowerUp(String tipo, int vidas, int puntos, int turnosExtra) {
+	public PowerUp(String nombre, boolean turnoExtra, int puntosExtra) {
 		super();
-		this.tipo = tipo;
-		this.vidas = vidas;
-		this.puntos = puntos;
-		this.turnosExtra = turnosExtra;
+		this.nombre = nombre;
+		this.turnoExtra = turnoExtra;
+		this.puntosExtra = puntosExtra;
 	}
-	
-	
-	
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public boolean isTurnoExtra() {
+		return turnoExtra;
+	}
+
+	public void setTurnoExtra(boolean turnoExtra) {
+		this.turnoExtra = turnoExtra;
+	}
+
+	public int getPuntosExtra() {
+		return puntosExtra;
+	}
+
+	public void setPuntosExtra(int puntosExtra) {
+		this.puntosExtra = puntosExtra;
+	}
+		
 }

@@ -46,3 +46,60 @@ public class Casillero {
 	
 	
 }
+=======
+package marioParty;
+import java.util.ArrayList;
+
+public class Casillero {
+	
+	private ArrayList<Player> listPlayer = new ArrayList<Player>();
+	private PowerUp powerUp;
+	private Casillero siguiente;
+	private int id;
+	
+	
+	public Casillero(int id) {
+		this.id = id;
+		this.listPlayer = new ArrayList<Player>();
+	}
+
+	public void setPlayer(Player player){
+		listPlayer.add(player);
+	}
+	
+	public void removePlayer(Player player) {
+		listPlayer.remove(player);
+	}
+	
+	public void setPowerUp(PowerUp powerUp){
+		this.powerUp = powerUp;
+	}
+	
+	public PowerUp getPowerUp() {
+		return powerUp;
+	}
+
+	public void removePowerUp(PowerUp powerUp) {
+		this.powerUp = null;
+	}
+
+	public ArrayList<Player> getListPlayer() {
+		return listPlayer;
+	}
+
+	public Casillero getSiguiente() {
+		return siguiente;
+	}
+
+	public void setSiguiente(Casillero siguiente) {
+		this.siguiente = siguiente;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+}
