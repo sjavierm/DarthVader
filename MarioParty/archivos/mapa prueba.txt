@@ -1,0 +1,26 @@
+Prueba
+5 5
+1 1 1 1 1
+1 0 1 0 1
+1 0 1 0 1
+1 0 1 0 1
+1 1 1 1 1
+0 0 inicio derecha
+1 0 derecha
+2 0 derecha abajo
+2 1 abajo
+2 2 abajo
+2 3 abajo
+3 0 derecha
+4 0 abajo
+4 1 abajo
+4 2 abajo
+4 3 abajo
+4 4 izquierda
+3 4 izquierda
+2 4 izquierda
+1 4 izquierda
+0 4 arriba
+0 3 arriba
+0 2 arriba
+0 1 arriba
